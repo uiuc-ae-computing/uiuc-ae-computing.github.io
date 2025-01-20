@@ -18,13 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: AE 498 CSE
+title: AE Computing
 email: huytran1@illinois.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Website for AE 498 CSE at the University of Illinois Urbana-Champaign.
+  Website for AE computing resources at the University of Illinois Urbana-Champaign.
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: https://just-the-docs.github.io
-url: "https://uiuc-ae498-cse.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://uiuc-ae-computing.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  huytran1
 
@@ -37,17 +37,17 @@ theme: just-the-docs
 # Aux links for upper right navigation link
 aux_links:
   "Campuswire":
-    - "https://campuswire.com/c/G6E2A7C6E/feed"
-  "GitHub":
-    - "https://github.com/uiuc-ae498-cse-2025-spring/"
-  "GitHub Classroom":
-    - "https://classroom.github.com/classrooms/195492988-uiuc-ae498-cse-2025-spring"
-  "Gradescope":
-    - "https://www.gradescope.com/courses/958746"
-  "Lectures":
-    - "https://drive.google.com/drive/folders/1XNkmpGDMHmJJEC2NRzIlImsSxwqWeLda?usp=sharing"
-  "Media Space":
-    - "https://mediaspace.illinois.edu/channel/channelid/366621562"
+    - "https://campuswire.com/c/GBAA919B7/feed"
+  # "GitHub":
+  #   - "https://github.com/uiuc-ae498-cse-2025-spring/"
+  # "GitHub Classroom":
+  #   - "https://classroom.github.com/classrooms/195492988-uiuc-ae498-cse-2025-spring"
+  # "Gradescope":
+  #   - "https://www.gradescope.com/courses/958746"
+  # "Lectures":
+  #   - "https://drive.google.com/drive/folders/1XNkmpGDMHmJJEC2NRzIlImsSxwqWeLda?usp=sharing"
+  # "Media Space":
+  #   - "https://mediaspace.illinois.edu/channel/channelid/366621562"
   # Template Repository: https://github.com/just-the-docs/just-the-docs-template
 
 # Collections for website data

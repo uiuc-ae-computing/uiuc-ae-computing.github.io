@@ -4,59 +4,15 @@ title: Home
 nav_order: 1
 ---
 
-# AE 498: Computational Systems Engineering
+# Aerospace Computing Resources
 
-**University of Illinois at Urbana-Champaign, Spring 2025**
+**University of Illinois at Urbana-Champaign**
 
-**Instructor:** Huy Tran
+Welcome! This website aims to help increase and support computational literacy within the AE department. Computational literacy and computational thinking involve the following skills:
 
-**Time:** Monday, Wednesday @ 2:30 pm - 3:50 pm
+- problem-solving through decomposition, heuristic reasoning, algorithmic thinking, pattern recognition, recursion, and more,
+- effectively using digital tools and platforms to solve problems,
+- collect, analyze, manage, visualize, and communicate data,
+- translate domain knowledge into a mathematical model.
 
-**Location:** 106B8 [Engineering Hall](https://maps.app.goo.gl/5Rk2i6RuZ8NnEZcQ6)
-
-Welcome! This course will introduce computational methods for the analysis and design of complex aerospace systems. See the [syllabus]({{ site.baseurl }}/syllabus) for more details.
-
-<!-- We hope you enjoy your exploration into this subject! Here are some (of many) exciting example applications of numerical methods:
-
-<html>
-<head>
-<style>
-* {
-  box-sizing: border-box;
-}
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
-</head>
-<body>
-<div class="row">
-  <div class="column">
-    <figure>
-        <img src="/assets/images/flow.gif" alt="" style="height:200px">
-        <figcaption><small>Modeling flow structures in bio-inspired flight. (Courtesy Halbo Dong's research group)</small></figcaption>
-    </figure>
-  </div>
-  <div class="column">
-    <figure>
-        <img src="/assets/images/structures.gif" alt="" style="height:200px">
-        <figcaption><small>Modeling crack propagation in composite materials. (Courtesy Phillipe Guebelle's research group)</small></figcaption>
-    </figure>
-  </div>
-  <div class="column">
-    <figure>
-        <img src="/assets/images/blood-flow.gif" alt="" style="height:200px">
-        <figcaption><small>Modeling blood flow in patient-specific hearts. (Courtesy Rajat Mittal's research group)</small></figcaption>
-    </figure>
-  </div>
-</div>
-</body>
-</html> -->
+A common misconception about computational literacy is that these skills are exclusively relevant to, or even the same as, the field of computer science. However, computational literacy is essential to a wide range of fields, especially where quantitative and data-centric problems are involved. We hope this website will serve as a useful resource for you throughout your aerospace studies.
