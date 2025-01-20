@@ -5,14 +5,14 @@ permalink: /staff/
 nav_order: 2
 ---
 
-# Instructors
+<!-- # Instructors
 
 {% assign instructors = site.staffers | where: 'role', 'Instructor' %}
 {% for staffer in instructors %}
 {{ staffer }}
-{% endfor %}
+{% endfor %} -->
 
-<!-- # Teaching Assistants
+# Teaching Assistants
 
 {% assign teaching_assistants = site.staffers | where: 'role', 'Teaching Assistant' %}
 {% assign num_teaching_assistants = teaching_assistants | size %}
@@ -23,7 +23,7 @@ nav_order: 2
 {% endfor %}
 {% endif %}
 
-# Course Assistants
+<!-- # Course Assistants
 
 {% assign course_assistants = site.staffers | where: 'role', 'Course Assistant' %}
 {% assign num_course_assistants = course_assistants | size %}
