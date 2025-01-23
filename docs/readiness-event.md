@@ -34,13 +34,15 @@ We suggest installing a Python interpreter through Anaconda, since Anaconda incl
 1. Go to [https://www.anaconda.com/download](https://www.anaconda.com/download) to download and install Anaconda.
 1. After installation, test that Anaconda was properly installed.
 
-    1. Open the command prompt (Windows) or terminal (macOS).
+    1. Open the command prompt (Windows) or terminal (Linux/macOS).
 
         - Windows users: you can open the command prompt by searching for "cmd" in the start menu.
 
         - macOS users: you can open the terminal by pressing `Command + Space bar` and searching for "terminal" in Spotlight Search.
 
-    1. Type the following in the command prompt (Windows) or terminal (macOS) and hit `Enter`.
+        - Linux users: you can open the terminal by pressing `Ctrl + Alt + T` or search for "terminal" in your applications.
+
+    1. Type the following in the command prompt (Windows) or terminal (Linux/macOS) and hit `Enter`.
 
             conda -V
 
@@ -54,11 +56,11 @@ We suggest installing a Python interpreter through Anaconda, since Anaconda incl
 
             py -3 --version
 
-        macOS users: type the following in the command prompt and hit `Enter`.
+        Linux/macOS users: type the following in the command prompt and hit `Enter`.
 
             python3 --version
 
-    1. You should see something like this:
+    1. You should see something like this (note: your version numbers may differ from the ones listed below):
 
             Python 3.11.11
 
@@ -77,7 +79,7 @@ Some popular alternatives are:
 
 1. Create a folder for the files associated with this tutorial.
 
-    For example, you might store files for this tutorial in a `computing-readiness` folder within a `projects` folder (where you store all coursework) within your `Documents` folder (macOS), organized like this:
+    For example, you might store files for this tutorial in a `computing-readiness` folder within a `projects` folder (where you store all coursework) within your `Documents` folder, organized like this:
 
     ```bash
     ├── Documents
