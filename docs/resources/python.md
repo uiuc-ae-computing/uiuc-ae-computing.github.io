@@ -8,6 +8,11 @@ parent: Resources
 
 # Python FAQs
 ## Anaconda
+### How do I access `conda`?
+To access `conda`, you can open the Anaconda Prompt (Windows) or terminal (Linux/macOS) and type `conda` followed by the command you want to run. For example, to check the version of `conda`, you can type:
+```bash
+conda -V
+```
 
 ## Jupyter Notebook
 ### How do I choose a kernel in Jupyter Notebook?
