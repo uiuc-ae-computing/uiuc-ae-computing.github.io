@@ -8,12 +8,14 @@ nav_order: 3
 # AE Computing Readiness Event
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Set Up a Python Programming Environment](#set-up-a-python-programming-environment)
-3. [Install Anaconda and a Python interpreter](#install-anaconda-and-a-python-interpreter)
-4. [Install an Integrated Development Environment](#install-an-integrated-development-environment)
-5. [Set Up a VS Code Workspace and Conda Environment for this Tutorial](#set-up-a-vs-code-workspace-and-conda-environment-for-this-tutorial)
-6. [Complete the Python Refresher Assignment](#complete-the-python-refresher-assignment)
+- [AE Computing Readiness Event](#ae-computing-readiness-event)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Set Up a Python Programming Environment](#set-up-a-python-programming-environment)
+    - [Install Anaconda and a Python interpreter](#install-anaconda-and-a-python-interpreter)
+    - [Install an Integrated Development Environment](#install-an-integrated-development-environment)
+  - [Set Up a VS Code Workspace and Conda Environment for this Tutorial](#set-up-a-vs-code-workspace-and-conda-environment-for-this-tutorial)
+  - [Complete the Python Refresher Assignment](#complete-the-python-refresher-assignment)
 
 ## Introduction
 
@@ -37,20 +39,21 @@ We suggest installing a Python interpreter through Anaconda, since Anaconda incl
     1. Open the command prompt (Windows) or terminal (Linux/macOS).
 
         - Windows users: you can open the command prompt by searching for "cmd" in the start menu.
+          - If the command prompt does not work, you can also try searching for "Anaconda Prompt" in the start menu.
 
         - macOS users: you can open the terminal by pressing `Command + Space bar` and searching for "terminal" in Spotlight Search.
 
         - Linux users: you can open the terminal by pressing `Ctrl + Alt + T` or search for "terminal" in your applications.
 
-    1. Type the following in the command prompt (Windows) or terminal (Linux/macOS) and hit `Enter`.
+    2. Type the following in the command prompt (Windows) or terminal (Linux/macOS) and hit `Enter`.
 
             conda -V
 
-    1. You should see something like this:
+    3. You should see something like this:
 
             conda 25.1.0
 
-1. Test that Python was properly installed.
+2. Test that Python was properly installed.
 
     1. Windows users: type the following in the command prompt and hit `Enter`.
 
@@ -60,7 +63,7 @@ We suggest installing a Python interpreter through Anaconda, since Anaconda incl
 
             python3 --version
 
-    1. You should see something like this (note: your version numbers may differ from the ones listed below):
+    2. You should see something like this (note: your version numbers may differ from the ones listed below):
 
             Python 3.11.11
 
