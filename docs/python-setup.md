@@ -1,21 +1,18 @@
 ---
 layout: page
-title: Tutorial
-permalink: /tutorial/
+title: Python Setup
+permalink: /python-setup/
 nav_order: 3
 ---
 
-# AE Computing Readiness Event
+# How to Set Up a Python Programming Environment
 
 ## Table of Contents
-- [AE Computing Readiness Event](#ae-computing-readiness-event)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Set Up a Python Programming Environment](#set-up-a-python-programming-environment)
-    - [Install Anaconda and a Python interpreter](#install-anaconda-and-a-python-interpreter)
-    - [Install an Integrated Development Environment](#install-an-integrated-development-environment)
-  - [Set Up a VS Code Workspace and Conda Environment for this Tutorial](#set-up-a-vs-code-workspace-and-conda-environment-for-this-tutorial)
-  - [Complete the Python Refresher Assignment](#complete-the-python-refresher-assignment)
+- [Introduction](#introduction)
+- [Install Miniconda](#install-miniconda)
+- [Install VS Code](#install-vs-code)
+- [Set Up a Project for this Tutorial](#set-up-a-project-for-this-tutorial)
+- [Complete the Python Refresher Assignment](#complete-the-python-refresher-assignment)
 
 ## Introduction
 
@@ -27,9 +24,7 @@ This tutorial aims to:
 
 Some of steps are based on the [Visual Studio Code Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial).
 
-## Set Up a Python Programming Environment
-
-### Install Anaconda and a Python interpreter
+## Install Miniconda and a Python interpreter
 
 We suggest installing a Python interpreter through Anaconda, since Anaconda includes Conda (which we suggest using for package management) and a Python interpreter.
 
@@ -67,32 +62,32 @@ We suggest installing a Python interpreter through Anaconda, since Anaconda incl
 
             Python 3.11.11
 
-### Install an Integrated Development Environment
+### Install VS Code
 
 An integrated development environment (IDE) "is a software application that helps programmers develop software code efficiently. It increases developer productivity by combining capabilities such as software editing, building, testing, and packaging in an easy-to-use application. Just as writers use text editors and accountants use spreadsheets, software developers use IDEs to make their job easier" (from [Amazon AWS](https://aws.amazon.com/what-is/ide/#:~:text=An%20integrated%20development%20environment%20(IDE,programmers%20develop%20software%20code%20efficiently.))).
 
-We suggest installing [Visual Studio Code](https://code.visualstudio.com/) (VS Code) but you are free to use any other IDE. Go to [https://code.visualstudio.com/Download](https://code.visualstudio.com/Download) to download and install VS Code.
+We suggest installing [Visual Studio Code](https://code.visualstudio.com/) (VS Code). Go to [https://code.visualstudio.com/Download](https://code.visualstudio.com/Download) to download and install VS Code.
 
 Some popular alternatives are:
 - [Jupyter Notebook App](https://jupyter.org/). The Jupyter Notebook App is an easy way to work with Python and should already be installed through Anaconda.
 - [PyCharm](https://www.jetbrains.com/pycharm/). PyCharm is a popular IDE that is pretty easy to use out of the box. The free version is fine, though student licenses are available for the pro version [here](https://www.jetbrains.com/community/education/#students).
 - [Atom](https://atom.io/). Atom is a text editor that is a lightweight alternative to full IDEs with plug-ins available to give more features than simple Jupyter notebooks.
 
-## Set Up a VS Code Workspace and Conda Environment for this Tutorial
+## Set Up a Project for this Tutorial
 
-1. Create a folder for the files associated with this tutorial.
+You should organize your code files into directories (or folders) based on projects (or assignments). For example, you might store files for this tutorial in a `computing-readiness` folder within a `projects` folder (where you store all coursework) within your `Documents` folder, organized like this:
 
-    For example, you might store files for this tutorial in a `computing-readiness` folder within a `projects` folder (where you store all coursework) within your `Documents` folder, organized like this:
-
-    ```bash
     ├── Documents
     │   ├── personal
     │   ├── projects
     │       ├── ae202
     │       ├── ae370
     │       ├── computing-readiness
-    │          ├── python-refresher.ipynb
-    ```
+    │           ├── python-refresher.ipynb
+
+You should then create and use a separate Conda environment for each project. VS Code provides a good explanation for why: "A best practice among Python developers is to use a project-specific virtual environment. Once you activate that environment, any packages you then install are isolated from other environments, including the global interpreter environment, reducing many complications that can arise from conflicting package versions."
+
+1. Create a folder for the files associated with this tutorial.
 
     You can create this folder in the command prompt using the following commands (assuming the folder structure shown above):
 
@@ -111,15 +106,15 @@ Some popular alternatives are:
         # change your working directory to your projects folder
         cd projects
 
-        # make a computing-readiness folder and change your working directory to it
+        # make a computing-readiness folder
         mkdir computing-readiness
+
+        # change your working directory to the computing-readiness folder
         cd computing-readiness
 
 1. Start VS Code in your `computing-readiness` folder. Open VS Code, go to VS Code's File > Open Folder, and select your `computing-readiness` folder.
 
 1. Create a Conda environment for this computing-readiness project.
-
-    VS Code provides a good explanation for why you should use project-specific virtual environments (like Conda environments): "A best practice among Python developers is to use a project-specific virtual environment. Once you activate that environment, any packages you then install are isolated from other environments, including the global interpreter environment, reducing many complications that can arise from conflicting package versions."
 
     A Conda cheatsheet of common Conda commands can be found [here](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf).
 

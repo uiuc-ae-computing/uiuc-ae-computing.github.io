@@ -36,8 +36,8 @@ theme: just-the-docs
 # Theme settings
 # Aux links for upper right navigation link
 aux_links:
-  "Campuswire":
-    - "https://campuswire.com/c/GBAA919B7/feed"
+  # "Campuswire":
+  #   - "https://campuswire.com/c/GBAA919B7/feed"
   # "GitHub":
   #   - "https://github.com/uiuc-ae498-cse-2025-spring/"
   # "GitHub Classroom":
