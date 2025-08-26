@@ -5,11 +5,17 @@ permalink: /python-setup/
 nav_order: 3
 ---
 
-# How to Set Up a Python Programming Environment
+# How to Set Up a Python Programming Environment <!-- omit from toc -->
 
-## Table of Contents
+## Table of Contents <!-- omit from toc -->
 - [Introduction](#introduction)
-- [Install Miniconda](#install-miniconda)
+- [Install Miniconda and a Python interpreter](#install-miniconda-and-a-python-interpreter)
+  - [MacOS](#macos)
+    - [⚠️ Do this once](#️-do-this-once)
+    - [Do this every time](#do-this-every-time)
+  - [Windows](#windows)
+    - [⚠️ Do this once](#️-do-this-once-1)
+    - [Do this every time](#do-this-every-time-1)
 - [Install VS Code](#install-vs-code)
 - [Set Up a Project for this Tutorial](#set-up-a-project-for-this-tutorial)
 - [Complete the Python Refresher Assignment](#complete-the-python-refresher-assignment)
@@ -28,41 +34,194 @@ Some of steps are based on the [Visual Studio Code Python tutorial](https://code
 
 We suggest installing a Python interpreter through Anaconda, since Anaconda includes Conda (which we suggest using for package management) and a Python interpreter.
 
-1. Go to [https://www.anaconda.com/download](https://www.anaconda.com/download) to download and install Anaconda.
-1. After installation, test that Anaconda was properly installed.
+If you are not familiar with command-line tools, we recommend reviewing the [command-line basics](/resources/commandline-basics/) before proceeding.
 
-    1. Open the command prompt (Windows) or terminal (Linux/macOS).
+### MacOS
 
-        - Windows users: you can open the command prompt by searching for "cmd" in the start menu.
-          - If the command prompt does not work, you can also try searching for "Anaconda Prompt" in the start menu.
+#### ⚠️ Do this once
 
-        - macOS users: you can open the terminal by pressing `Command + Space bar` and searching for "terminal" in Spotlight Search.
+**Install Xcode Command Line Tools**
 
-        - Linux users: you can open the terminal by pressing `Ctrl + Alt + T` or search for "terminal" in your applications.
+Open a terminal and run this command, accepting all default options:
 
-    2. Type the following in the command prompt (Windows) or terminal (Linux/macOS) and hit `Enter`.
+```bash
+xcode-select --install
+```
 
-            conda -V
+You may be asked to restart your computer during or after this process. Please do so if prompted.
 
-    3. You should see something like this:
+**Install conda**
 
-            conda 25.1.0
+[Conda](https://docs.conda.io/) is a package manager that you will use to install Python, along with a number of required tools.
 
-2. Test that Python was properly installed.
+1. First, check if conda is already installed by trying to update it:
 
-    1. Windows users: type the following in the command prompt and hit `Enter`.
+   ```bash
+   conda update -n base conda
+   ```
 
-            py -3 --version
+   If this process succeeds, then conda is installed, and you can skip to the next step. If this process does not succeed, continue with the installation below.
 
-        Linux/macOS users: type the following in the command prompt and hit `Enter`.
+2. Go to the [Miniconda installer page](https://www.anaconda.com/download/success) and download the appropriate `.pkg` file for your Mac architecture:
+   - For Intel Macs: Download "Miniconda3 macOS Intel x86 64-bit pkg"
+   - For Apple Silicon Macs (M1/M2): Download "Miniconda3 macOS Apple M1 64-bit pkg"
 
-            python3 --version
+3. Double-click the downloaded `.pkg` file and accept all the default options during installation.
 
-    2. You should see something like this (note: your version numbers may differ from the ones listed below):
+4. After installation, restart your terminal or run:
 
-            Python 3.11.11
+   ```bash
+   source ~/.bash_profile
+   ```
 
-### Install VS Code
+   or 
+
+   ```bash
+   source ~/.zshrc
+   ```
+
+   depending on your shell.
+
+**Create a conda environment**
+
+An "environment" is like a sandbox where you can install software without causing any conflict with other things you might have installed on your computer. To create an environment for your project work, open a terminal and run this command:
+
+```bash
+conda create -n my-project
+```
+
+You may see something like `WARNING: A conda environment already exists` and be asked if you want to `Remove existing environment`. This means that you already created an environment with that name. Perhaps something went wrong and you are creating it again — in this case, type `y` to remove the existing environment and proceed to recreate it. From then on, accept all default options.
+
+Finally, run the following commands (copy the entire thing, paste it into your terminal, and press return):
+
+```bash
+conda activate my-project
+conda install -y python=3 numpy scipy matplotlib notebook ipywidgets
+```
+
+**Verify Installation**
+
+Open a new terminal and run:
+
+```bash
+conda --version
+```
+
+You should see the conda version number if the installation was successful.
+
+#### Do this every time
+
+**Change your working directory**
+
+Open a terminal and change your working directory to your project folder, wherever you put this.
+
+**Activate your conda environment**
+
+Run this command:
+
+```bash
+conda activate my-project
+```
+
+You should see the prefix to your terminal prompt change from `(base)` to `(my-project)`. This means you are in the conda environment you created for your project work.
+
+**Start a jupyter notebook (optional)**
+
+If you want to work with Jupyter notebooks, run this command:
+
+```bash
+jupyter notebook
+```
+
+A browser window should open with the jupyter notebook interface. You can now navigate to and open any of the notebooks (with extension `.ipynb`).
+
+We strongly recommend you duplicate and work with a copy of any given notebook rather than working with the original. Feel free to ignore this suggestion if you are a `git` expert.
+
+### Windows
+
+#### ⚠️ Do this once
+
+**Install conda**
+
+[Conda](https://docs.conda.io/) is a package manager that you will use to install Python, along with a number of required tools.
+
+1. First, check if conda is already installed:
+   - Try to open "Anaconda Powershell Prompt (Miniconda)" from the Windows Start menu
+   - If you can open it, run the following command to update conda:
+
+     ```powershell
+     conda update -n base conda
+     ```
+
+   If this process succeeds, then conda is installed properly, and you can skip to the next step. If you cannot open the Anaconda Powershell or the update fails, continue with the installation below.
+
+2. Go to the [Miniconda installer page](https://www.anaconda.com/download/success) and download the "Miniconda3 Windows 64-bit" installer (the `.exe` file).
+
+3. Double-click the downloaded `.exe` file and accept all the default options during installation.
+
+4. After installation, you should be able to find "Anaconda Powershell Prompt (Miniconda)" in your Windows Start menu.
+
+**Create a conda environment**
+
+An "environment" is like a sandbox where you can install software without causing any conflict with other things you might have installed on your computer. To create an environment for your project work, open an anaconda powershell and run this command:
+
+```powershell
+conda create -n my-project
+```
+
+You may see something like `WARNING: A conda environment already exists` and be asked if you want to `Remove existing environment`. This means that you already created an environment with that name. Perhaps something went wrong and you are creating it again — in this case, type `y` to remove the existing environment and proceed to recreate it. From then on, accept all default options.
+
+Finally, run the following commands (copy the entire thing, paste it into your powershell, and press enter):
+
+```powershell
+conda activate my-project
+conda install -y python=3 numpy scipy sympy matplotlib notebook ipywidgets
+```
+
+
+**Verify Installation**
+
+1. Open "Anaconda Powershell Prompt (Miniconda)" from the Windows Start menu.
+
+2. Run the following command to verify the installation:
+
+   ```powershell
+   conda --version
+   ```
+
+   You should see the conda version number if the installation was successful.
+
+#### Do this every time
+
+**Change your working directory**
+
+Open an anaconda powershell and change your working directory to your project folder, wherever you put this.
+
+**Activate your conda environment**
+
+Run this command:
+
+```powershell
+conda activate my-project
+```
+
+You should see the prefix to your powershell prompt change from `(base)` to `(my-project)`. This means you are in the conda environment you created for your project work.
+
+**Start a jupyter notebook (optional)**
+
+If you want to work with Jupyter notebooks, run this command:
+
+```powershell
+jupyter notebook
+```
+
+A browser window should open with the jupyter notebook interface. You can now navigate to and open any of the notebooks (with extension `.ipynb`).
+
+We strongly recommend you duplicate and work with a copy of any given notebook rather than working with the original. Feel free to ignore this suggestion if you are a `git` expert.
+
+**Note for Windows Users**: When the instructions refer to opening a "terminal" or "command prompt", you should use the "Anaconda Powershell Prompt (Miniconda)" application instead of the regular Windows Command Prompt or PowerShell.
+
+## Install VS Code
 
 An integrated development environment (IDE) "is a software application that helps programmers develop software code efficiently. It increases developer productivity by combining capabilities such as software editing, building, testing, and packaging in an easy-to-use application. Just as writers use text editors and accountants use spreadsheets, software developers use IDEs to make their job easier" (from [Amazon AWS](https://aws.amazon.com/what-is/ide/#:~:text=An%20integrated%20development%20environment%20(IDE,programmers%20develop%20software%20code%20efficiently.))).
 
