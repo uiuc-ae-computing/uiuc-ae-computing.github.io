@@ -68,19 +68,7 @@ You may be asked to restart your computer during or after this process. Please d
 
 3. Double-click the downloaded `.pkg` file and accept all the default options during installation.
 
-4. After installation, restart your terminal or run:
-
-   ```bash
-   source ~/.bash_profile
-   ```
-
-   or 
-
-   ```bash
-   source ~/.zshrc
-   ```
-
-   depending on your shell.
+4. After installation, restart your terminal (close and open the terminal).
 
 **Create a conda environment**
 
