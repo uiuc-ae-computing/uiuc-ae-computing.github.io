@@ -65,7 +65,17 @@ You may be asked to restart your computer during or after this process. Please d
 
 4. After installation, restart your terminal (close and open the terminal).
 
-**Create a conda environment**
+**Verify Installation**
+
+Open a new terminal and run:
+
+```bash
+conda --version
+```
+
+You should see the conda version number if the installation was successful.
+
+**Create a conda environment (Do this once)**
 
 An "environment" is like a sandbox where you can install software without causing any conflict with other things you might have installed on your computer. To create an environment for your project work, open a terminal and run this command:
 
@@ -81,29 +91,6 @@ Finally, run the following commands (copy the entire thing, paste it into your t
 conda activate my-project
 conda install -y python=3 numpy scipy matplotlib notebook ipywidgets
 ```
-
-**Verify Installation**
-
-Open a new terminal and run:
-
-```bash
-conda --version
-```
-
-You should see the conda version number if the installation was successful.
-
-
-**Start a jupyter notebook (optional)**
-
-If you want to work with Jupyter notebooks, run this command:
-
-```bash
-jupyter notebook
-```
-
-A browser window should open with the jupyter notebook interface. You can now navigate to and open any of the notebooks (with extension `.ipynb`).
-
-We strongly recommend you duplicate and work with a copy of any given notebook rather than working with the original. Feel free to ignore this suggestion if you are a `git` expert.
 
 ### Windows
 
@@ -127,7 +114,19 @@ We strongly recommend you duplicate and work with a copy of any given notebook r
 
 4. After installation, you should be able to find "Anaconda Powershell Prompt (Miniconda)" in your Windows Start menu.
 
-**Create a conda environment**
+**Verify Installation**
+
+1. Open "Anaconda Powershell Prompt (Miniconda)" from the Windows Start menu.
+
+2. Run the following command to verify the installation:
+
+   ```powershell
+   conda --version
+   ```
+
+   You should see the conda version number if the installation was successful.
+
+**Create a conda environment (Do this once)**
 
 An "environment" is like a sandbox where you can install software without causing any conflict with other things you might have installed on your computer. To create an environment for your project work, open an anaconda powershell and run this command:
 
@@ -144,18 +143,6 @@ conda activate my-project
 conda install -y python=3 numpy scipy sympy matplotlib notebook ipywidgets
 ```
 
-
-**Verify Installation**
-
-1. Open "Anaconda Powershell Prompt (Miniconda)" from the Windows Start menu.
-
-2. Run the following command to verify the installation:
-
-   ```powershell
-   conda --version
-   ```
-
-   You should see the conda version number if the installation was successful.
 ## Do this every time
 
 **Change your working directory**
