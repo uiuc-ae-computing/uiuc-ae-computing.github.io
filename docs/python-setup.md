@@ -11,11 +11,8 @@ nav_order: 3
 - [Introduction](#introduction)
 - [Install Miniconda and a Python interpreter](#install-miniconda-and-a-python-interpreter)
   - [MacOS](#macos)
-    - [⚠️ Do this once](#️-do-this-once)
-    - [Do this every time](#do-this-every-time)
   - [Windows](#windows)
-    - [⚠️ Do this once](#️-do-this-once-1)
-    - [Do this every time](#do-this-every-time-1)
+- [Do this every time](#do-this-every-time)
 - [Install VS Code](#install-vs-code)
 - [Set Up a Project for this Tutorial](#set-up-a-project-for-this-tutorial)
 - [Complete the Python Refresher Assignment](#complete-the-python-refresher-assignment)
@@ -37,8 +34,6 @@ We suggest installing a Python interpreter through Anaconda, since Anaconda incl
 If you are not familiar with command-line tools, we recommend reviewing the [command-line basics](/resources/commandline-basics/) before proceeding.
 
 ### MacOS
-
-#### ⚠️ Do this once
 
 **Install Xcode Command Line Tools**
 
@@ -97,21 +92,6 @@ conda --version
 
 You should see the conda version number if the installation was successful.
 
-#### Do this every time
-
-**Change your working directory**
-
-Open a terminal and change your working directory to your project folder, wherever you put this.
-
-**Activate your conda environment**
-
-Run this command:
-
-```bash
-conda activate my-project
-```
-
-You should see the prefix to your terminal prompt change from `(base)` to `(my-project)`. This means you are in the conda environment you created for your project work.
 
 **Start a jupyter notebook (optional)**
 
@@ -126,8 +106,6 @@ A browser window should open with the jupyter notebook interface. You can now na
 We strongly recommend you duplicate and work with a copy of any given notebook rather than working with the original. Feel free to ignore this suggestion if you are a `git` expert.
 
 ### Windows
-
-#### ⚠️ Do this once
 
 **Install conda**
 
@@ -178,22 +156,22 @@ conda install -y python=3 numpy scipy sympy matplotlib notebook ipywidgets
    ```
 
    You should see the conda version number if the installation was successful.
-
-#### Do this every time
+## Do this every time
 
 **Change your working directory**
 
-Open an anaconda powershell and change your working directory to your project folder, wherever you put this.
+Open a terminal and change your working directory to your project folder, wherever you put this.
 
 **Activate your conda environment**
 
 Run this command:
 
-```powershell
+```bash
 conda activate my-project
 ```
 
-You should see the prefix to your powershell prompt change from `(base)` to `(my-project)`. This means you are in the conda environment you created for your project work.
+You should see the prefix to your terminal prompt change from `(base)` to `(my-project)`. This means you are in the conda environment you created for your project work.
+
 
 **Start a jupyter notebook (optional)**
 
