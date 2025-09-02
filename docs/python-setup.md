@@ -58,8 +58,8 @@ You may be asked to restart your computer during or after this process. Please d
    If this process succeeds, then conda is installed, and you can skip to the next step. If this process does not succeed, continue with the installation below.
 
 2. Go to the [Miniconda installer page](https://www.anaconda.com/download/success) and download the appropriate `.pkg` file for your Mac architecture:
-   - For Intel Macs: Download "Miniconda3 macOS Intel x86 64-bit pkg"
-   - For Apple Silicon Macs (M1/M2): Download "Miniconda3 macOS Apple M1 64-bit pkg"
+   - For Intel Macs: Click "Download for Intel"
+   - For Apple Silicon Macs (M1, M2, M3, etc): Click "Download for Apple Silicon"
 
 3. Double-click the downloaded `.pkg` file and accept all the default options during installation.
 
