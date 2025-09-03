@@ -2,7 +2,8 @@
 layout: page
 title: Python Setup (macOS)
 permalink: /python-setup-macos/
-nav_order: 3
+nav_order: 1
+parent: Setup Tutorials
 ---
 
 # How to Set Up a Python Programming Environment <!-- omit from toc -->
@@ -10,8 +11,17 @@ nav_order: 3
 ## Table of Contents <!-- omit from toc -->
 - [Introduction](#introduction)
 - [Install Miniconda](#install-miniconda)
+  - [Install Xcode Command Line Tools](#install-xcode-command-line-tools)
+  - [Install Miniconda](#install-miniconda-1)
+  - [Verify Installation](#verify-installation)
 - [Install VS Code](#install-vs-code)
+  - [Install VS Code](#install-vs-code-1)
+  - [Install the Python and Jupyter Extensions](#install-the-python-and-jupyter-extensions)
 - [Complete the Python Refresher Assignment](#complete-the-python-refresher-assignment)
+- [Do this once for every course](#do-this-once-for-every-course)
+  - [Create a folder for the course and assignment](#create-a-folder-for-the-course-and-assignment)
+  - [Create a conda environment for the course](#create-a-conda-environment-for-the-course)
+- [Do this everytime you work on a course](#do-this-everytime-you-work-on-a-course)
 
 
 ## Introduction
