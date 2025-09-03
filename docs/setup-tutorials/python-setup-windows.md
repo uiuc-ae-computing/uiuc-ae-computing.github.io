@@ -37,13 +37,13 @@ Some of steps are based on the [Visual Studio Code Python tutorial](https://code
 >
 > When we say "open a terminal," what we mean is to start the **Terminal** application. Here is one way to do that:
 > 
-> If Miniconda is installed, then use the Start menu to search for and open an **Anaconda Prompt**.
-> * Type "Anaconda Prompt" in the search field.
-> * Click Anaconda Prompt.
+> If Miniconda is installed, then use the Start menu to search for and open an **Anaconda Powershell Prompt**.
+> * Type "Anaconda Powershell Prompt" in the search field.
+> * Click Anaconda Powershell Prompt.
 >
 > There may be other words in the titles of these two applications — for example, “Anaconda Prompt” may appear as “Anaconda Prompt (Miniconda3).”
 > 
-> See documentation on [Anaconda Prompt](https://www.anaconda.com/docs/reference/glossary#anaconda-prompt) for more information. Note that it is often helpful to have more than one terminal window open at the same time (or more than one tab in the same window).
+> See documentation on [Anaconda Powershell Prompt](https://www.anaconda.com/docs/reference/glossary#anaconda-prompt) for more information. Note that it is often helpful to have more than one terminal window open at the same time (or more than one tab in the same window).
 
 {: .note-title}
 > How to run a command
@@ -68,7 +68,7 @@ Some of steps are based on the [Visual Studio Code Python tutorial](https://code
 
 ### Install Miniconda
 
-1. Check if conda is already installed by searching for "Anaconda Prompt" in the Start menu.
+1. Check if conda is already installed by searching for "Anaconda Powershell Prompt" in the Start menu.
 
    If this process succeeds, then conda is installed, and you can skip to [Verify Installation](#verify-installation). If this process does not succeed, continue with the installation below.
 
@@ -76,7 +76,7 @@ Some of steps are based on the [Visual Studio Code Python tutorial](https://code
 
 3. Double-click the downloaded `.exe` file and accept all the default options during installation.
 
-4. After installation, search for "Anaconda Prompt" in the Start menu and open it.
+4. After installation, search for "Anaconda Powershell Prompt" in the Start menu and open it.
 
 ### Verify Installation
 
