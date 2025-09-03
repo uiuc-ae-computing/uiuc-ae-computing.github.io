@@ -175,7 +175,7 @@ You can create the `computing-readiness' folder and structure shown above by ope
 cd
 
 # show the folders within your home directory (optional)
-ls
+dir
 
 # change your working directory to the Documents folder
 cd Documents
