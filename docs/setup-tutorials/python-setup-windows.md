@@ -164,7 +164,7 @@ You should organize your code files into folders (or directories) based on cours
 > C:\Users\YourName\Documents\projects\ae-computing\python-refresher
 > ```
 > 
-> See documentation in the [Specify files and folders in Terminal on Mac](https://support.apple.com/guide/terminal/specify-files-and-folders-apd3cf6fe02-3ec8-48f1-951f-866e52955fc8/mac) page for other ways to specify the path to a directory.
+> See documentation in the [cd](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd) and [dir](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir) page for other ways to specify the path to a directory.
 
 You can create the `computing-readiness' folder and structure shown above by opening a terminal and running the following commands. **Note that lines starting with a "#" symbol are comments, not commands to enter.**
 
