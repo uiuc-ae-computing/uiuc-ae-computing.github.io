@@ -129,6 +129,7 @@ Remember to **drag the Visual Studio Code.app file into your Applications folder
 ## Complete the Python Refresher Assignment
 
 You can now use your VS Code workspace and Conda environment to complete the `python-refresher.ipynb` file found [here](/assets/files/python-refresher.ipynb).
+If the link shows a raw JSON data, right click the link, and select "Save Link As" to download the file.
 
 Follow the steps in the [Do this once for every course](#do-this-once-for-every-course) section to set up an environment for the `python-refresher.ipynb` assignment. Be sure to replace instances of "my-course" with "computing-readiness" and "my-assignment" with "python-refresher."
 
