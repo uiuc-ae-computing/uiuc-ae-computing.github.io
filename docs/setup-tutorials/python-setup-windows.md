@@ -160,7 +160,7 @@ You should organize your code files into folders (or directories) based on cours
 > (base) python-refresher>
 > ```
 > 
-> I could then use the `pwd` command to print the working directory, which would show something like this:
+> I could then use the `dir` command to print the working directory, which would show something like this:
 > 
 > ```bash
 > (base) python-refresher> cd
