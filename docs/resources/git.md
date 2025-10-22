@@ -26,6 +26,18 @@ Git is a version control system that helps you track changes to your code and co
   - [Cloning a Repository](#cloning-a-repository)
   - [Pushing Changes](#pushing-changes)
   - [Pulling Changes](#pulling-changes)
+- [Branching and Branching Strategies](#branching-and-branching-strategies)
+  - [Understanding Branches](#understanding-branches)
+  - [Basic Branch Commands](#basic-branch-commands)
+  - [Merging Branches](#merging-branches)
+  - [Branch Workflow for Coursework](#branch-workflow-for-coursework)
+  - [Common Branching Strategies](#common-branching-strategies)
+    - [Feature Branch Workflow](#feature-branch-workflow)
+    - [Gitflow Workflow](#gitflow-workflow)
+    - [GitHub Flow (Simplified)](#github-flow-simplified)
+  - [Best Practices for Branches](#best-practices-for-branches)
+  - [Handling Merge Conflicts](#handling-merge-conflicts)
+  - [Visualizing Branches](#visualizing-branches)
 - [Common Git Commands](#common-git-commands)
 - [Tips for Beginners](#tips-for-beginners)
 - [Further Reading: GitHub CLI](#further-reading-github-cli)
@@ -271,6 +283,260 @@ This is important when:
 - Working with collaborators who have made changes
 - Working on multiple computers
 - Before starting new work (to ensure you have the latest version)
+
+## Branching and Branching Strategies
+
+Branches are one of Git's most powerful features. They allow you to work on different versions of your project simultaneously without affecting the main codebase.
+
+### Understanding Branches
+
+Think of a branch as a separate timeline for your project. You can:
+- Create a new branch to work on a feature
+- Make commits on that branch
+- Switch back to the main branch (which remains unchanged)
+- Merge your feature branch back when you're done
+
+The default branch is typically called `main` (or `master` in older repositories).
+
+### Basic Branch Commands
+
+**List all branches:**
+```bash
+git branch
+```
+
+The current branch will be marked with an asterisk (*).
+
+**Create a new branch:**
+```bash
+git branch feature-name
+```
+
+**Switch to a branch:**
+```bash
+git checkout feature-name
+```
+
+**Create and switch to a new branch (shortcut):**
+```bash
+git checkout -b feature-name
+```
+
+**Or using the newer `switch` command:**
+```bash
+git switch feature-name           # Switch to existing branch
+git switch -c feature-name        # Create and switch to new branch
+```
+
+**Delete a branch:**
+```bash
+git branch -d feature-name        # Safe delete (only if merged)
+git branch -D feature-name        # Force delete
+```
+
+### Merging Branches
+
+Once you've finished work on a branch, you can merge it back into the main branch:
+
+```bash
+# Switch to the branch you want to merge INTO
+git checkout main
+
+# Pull latest changes
+git pull
+
+# Merge your feature branch
+git merge feature-name
+```
+
+If there are no conflicts, Git will automatically merge the changes. If there are conflicts, Git will mark them in the files, and you'll need to resolve them manually.
+
+### Branch Workflow for Coursework
+
+Here's a simple workflow recommended for class projects:
+
+**1. Start with the main branch:**
+```bash
+git checkout main
+git pull  # Get latest changes
+```
+
+**2. Create a branch for your work:**
+```bash
+git checkout -b homework-2
+```
+
+**3. Make your changes and commit:**
+```bash
+# Edit your files
+git add .
+git commit -m "Complete problem 1"
+# Continue working...
+git commit -m "Complete problem 2"
+```
+
+**4. Push your branch to GitHub:**
+```bash
+git push -u origin homework-2
+```
+
+**5. When ready, merge back to main:**
+```bash
+git checkout main
+git merge homework-2
+git push
+```
+
+### Common Branching Strategies
+
+#### Feature Branch Workflow
+
+This is the simplest strategy and works well for individual projects or small teams:
+
+- `main` - Always stable, working code
+- `feature-X` - Separate branch for each feature or homework assignment
+
+**Example for class:**
+```bash
+# Working on Homework 3
+git checkout -b homework-3
+# ... make changes ...
+git commit -m "Complete drag force calculations"
+git push -u origin homework-3
+
+# When done and tested
+git checkout main
+git merge homework-3
+git push
+```
+
+#### Gitflow Workflow
+
+Gitflow is a more structured workflow commonly used in larger projects and industry. While it may be more than you need for coursework, it's good to understand:
+
+**Branch types:**
+- `main` (or `master`) - Production-ready code
+- `develop` - Integration branch for features
+- `feature/*` - Individual features (e.g., `feature/add-plot`)
+- `hotfix/*` - Quick fixes for production issues
+- `release/*` - Preparing for a new release
+
+**Basic Gitflow process:**
+
+1. **Start a feature:**
+   ```bash
+   git checkout develop
+   git checkout -b feature/calculate-lift
+   ```
+
+2. **Work on the feature:**
+   ```bash
+   git add .
+   git commit -m "Add lift calculation function"
+   ```
+
+3. **Finish the feature:**
+   ```bash
+   git checkout develop
+   git merge feature/calculate-lift
+   git branch -d feature/calculate-lift
+   git push
+   ```
+
+4. **Create a release:**
+   ```bash
+   git checkout develop
+   git checkout -b release/1.0
+   # Make final adjustments, update version numbers
+   git checkout main
+   git merge release/1.0
+   git tag -a v1.0 -m "Version 1.0"
+   git checkout develop
+   git merge release/1.0
+   git branch -d release/1.0
+   ```
+
+#### GitHub Flow (Simplified)
+
+This is a simpler alternative to Gitflow, popular for web projects:
+
+1. `main` branch is always deployable
+2. Create descriptive branches off `main` (e.g., `add-visualization`)
+3. Commit to that branch locally and push regularly
+4. Open a pull request when ready
+5. Merge after review and testing
+6. Delete the branch after merging
+
+### Best Practices for Branches
+
+1. **Use descriptive branch names:**
+   - Good: `homework-3`, `fix-integration-bug`, `add-plotting-function`
+   - Bad: `temp`, `fix`, `branch1`
+
+2. **Keep branches short-lived:** Don't let branches diverge too far from `main`. Merge regularly to avoid complex conflicts.
+
+3. **One purpose per branch:** Each branch should focus on one feature, fix, or task.
+
+4. **Delete merged branches:** Once a branch is merged, delete it to keep your repository clean:
+   ```bash
+   git branch -d feature-name
+   git push origin --delete feature-name  # Delete remote branch
+   ```
+
+5. **Pull before creating a new branch:** Always start with the latest code:
+   ```bash
+   git checkout main
+   git pull
+   git checkout -b new-feature
+   ```
+
+6. **Commit before switching branches:** Either commit or stash your changes before switching to avoid losing work.
+
+### Handling Merge Conflicts
+
+Sometimes Git can't automatically merge changes, and you'll get a conflict:
+
+```bash
+git merge feature-branch
+# CONFLICT (content): Merge conflict in calculation.py
+# Automatic merge failed; fix conflicts and then commit the result.
+```
+
+**To resolve:**
+
+1. Open the conflicting file. Git marks conflicts like this:
+   ```python
+   <<<<<<< HEAD
+   # Your current code
+   result = x * 2
+   =======
+   # Incoming changes
+   result = x * 3
+   >>>>>>> feature-branch
+   ```
+
+2. Edit the file to keep what you want:
+   ```python
+   result = x * 3  # Decided to keep the incoming change
+   ```
+
+3. Remove the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
+
+4. Stage and commit the resolved file:
+   ```bash
+   git add calculation.py
+   git commit -m "Resolve merge conflict in calculation"
+   ```
+
+### Visualizing Branches
+
+To see your branch structure:
+
+```bash
+git log --graph --oneline --all
+```
+
+This shows a visual representation of your branches and commits.
 
 ## Common Git Commands
 
