@@ -284,7 +284,7 @@ This is important when:
 - Working on multiple computers
 - Before starting new work (to ensure you have the latest version)
 
-## Branching and Branching Strategies
+## Branching Strategies
 
 Branches are one of Git's most powerful features. They allow you to work on different versions of your project simultaneously without affecting the main codebase.
 
