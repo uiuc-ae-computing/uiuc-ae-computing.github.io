@@ -26,7 +26,7 @@ Git is a version control system that helps you track changes to your code and co
   - [Cloning a Repository](#cloning-a-repository)
   - [Pushing Changes](#pushing-changes)
   - [Pulling Changes](#pulling-changes)
-- [Branching and Branching Strategies](#branching-and-branching-strategies)
+- [Branching Strategies](#branching-strategies)
   - [Understanding Branches](#understanding-branches)
   - [Basic Branch Commands](#basic-branch-commands)
   - [Merging Branches](#merging-branches)
