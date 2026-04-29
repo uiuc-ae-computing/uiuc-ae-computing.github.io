@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Python Setup (Windows)
-permalink: /python-setup-windows/
+title: Python Setup (macOS)
+permalink: /python-setup-macos/
 nav_order: 1
-parent: Setup Tutorials
+parent: Introductory
 ---
 
 # How to Set Up a Python Programming Environment <!-- omit from toc -->
@@ -11,6 +11,7 @@ parent: Setup Tutorials
 ## Table of Contents <!-- omit from toc -->
 - [Introduction](#introduction)
 - [Install Miniconda](#install-miniconda)
+  - [Install Xcode Command Line Tools](#install-xcode-command-line-tools)
   - [Install Miniconda](#install-miniconda-1)
   - [Verify Installation](#verify-installation)
 - [Install VS Code](#install-vs-code)
@@ -37,46 +38,62 @@ Some of steps are based on the [Visual Studio Code Python tutorial](https://code
 >
 > When we say "open a terminal," what we mean is to start the **Terminal** application. Here is one way to do that:
 > 
-> If Miniconda is installed, then use the Start menu to search for and open an **Anaconda Powershell Prompt**.
-> * Type "Anaconda Powershell Prompt" in the search field.
-> * Click Anaconda Powershell Prompt.
->
-> There may be other words in the titles of these two applications — for example, “Anaconda Prompt” may appear as “Anaconda Prompt (Miniconda3).”
+> * Click the Launchpad icon in the Dock.
+> * Type "Terminal" in the search field.
+> * Click Terminal.
 > 
-> See documentation on [Anaconda Powershell Prompt](https://www.anaconda.com/docs/reference/glossary#anaconda-prompt) for more information. Note that it is often helpful to have more than one terminal window open at the same time (or more than one tab in the same window).
+> See documentation on [Open Terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) for more information. Note that it is often helpful to have more than one terminal window open at the same time (or more than one tab in the same window).
 
 {: .note-title}
 > How to run a command
 > 
 > When we say "run a command," what we mean is to type something into the terminal window and press return. For example, suppose we said:
 > 
-> > run the command `cd` to find your current working directory
+> > run the command `pwd` to find your current working directory
 > 
-> You would type `cd` into the terminal window and press return, with the result being something like this:
+> You would type `pwd` into the terminal window and press return, with the result being something like this:
 > 
 > ```
-> (base) C:\Users\YourName> cd
-> C:\Users\YourName
+> (base) ➜  ~ pwd
+> /Users/httran
 > ```
 > 
-> See documentation on [Windows Commands](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands). Also see the [command-line basics](/resources/commandline-basics/) or [Command Line Primer](https://developer.apple.com/library/archive/documentation/OpenSource/Conceptual/ShellScripting/CommandLInePrimer/CommandLine.html) page for a list of frequently used commands.
+> See documentation on [Execute commands and run tools in Terminal on Mac for more information](https://support.apple.com/guide/terminal/execute-commands-and-run-tools-apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/mac). Also see the [command-line basics](/resources/commandline-basics/) or [Command Line Primer](https://developer.apple.com/library/archive/documentation/OpenSource/Conceptual/ShellScripting/CommandLInePrimer/CommandLine.html) page for a list of frequently used commands.
 
 
 ## Install Miniconda
 
 [Conda](https://docs.conda.io/) is a package management system that includes Python. We suggest you install Miniconda to install conda and Python.
 
+### Install Xcode Command Line Tools
+
+Open a terminal and run the following command, accepting all default options. You may be asked to restart your computer during or after this process. Please do so if prompted.
+
+```bash
+xcode-select --install
+```
+
+You may get a message like following. If so, command line tools are already installed, and you can skip to [Install Miniconda](#install-miniconda).
+
+```bash
+xcode-select: note: Command line tools are already installed. Use "Software Update" in System Settings or the softwareupdate command line interface to install updates
+```
+
 ### Install Miniconda
 
-1. Check if conda is already installed by searching for "Anaconda Powershell Prompt" in the Start menu.
+1. Check if conda is already installed by trying to update it:
+
+   ```bash
+   conda update -n base conda
+   ```
 
    If this process succeeds, then conda is installed, and you can skip to [Verify Installation](#verify-installation). If this process does not succeed, continue with the installation below.
 
-2. Go to the [Miniconda installer page](https://www.anaconda.com/download/success) and download the appropriate `.exe` file for Windows. Make sure you are running 64-bit Windows.
+2. Go to the [Miniconda installer page](https://www.anaconda.com/download/success) and download the appropriate `.pkg` file for your Mac architecture. See the [Mac computers with Apple silicon](https://support.apple.com/en-us/116943) page for help determining whether you have Apple silicon or Intel Mac.
 
-3. Double-click the downloaded `.exe` file and accept all the default options during installation.
+3. Double-click the downloaded `.pkg` file and accept all the default options during installation.
 
-4. After installation, search for "Anaconda Powershell Prompt" in the Start menu and open it.
+4. After installation, restart your terminal (close and open the terminal).
 
 ### Verify Installation
 
@@ -94,7 +111,7 @@ We suggest installing [Visual Studio Code](https://code.visualstudio.com/) (VS C
 
 ### Install VS Code
 
-Follow the instructions in the [Install VS Code on Windows](https://code.visualstudio.com/docs/setup/windows) page to download and install VS Code.
+Follow the instructions in the [Install VS Code on macOS](https://code.visualstudio.com/docs/setup/mac#_install-vs-code-on-macos) page to download and install VS Code.
 
 Remember to **drag the Visual Studio Code.app file into your Applications folder**.
 
@@ -144,30 +161,30 @@ You should organize your code files into folders (or directories) based on cours
 > To do this, we run the command
 > 
 > ```bash
-> cd path\to\directory
+> cd path/to/directory
 > ```
 > 
-> where `path\to\directory` is replaced by the location of the directory in which you want to work. One easy way to find this location (i.e., the "path" to your directory) is by dragging its folder from the Finder into your terminal window (see documentation on [Quickly Copy Files Paths to Your Command Prompt via Drag and Drop](https://lifehacker.com/quickly-copy-file-paths-to-your-command-prompt-via-drag-5382503)). In particular, I would first type `cd ` (note the single trailing space):
+> where `path/to/directory` is replaced by the location of the directory in which you want to work. One easy way to find this location (i.e., the "path" to your directory) is by dragging its folder from the Finder into your terminal window (see documentation on [Drag items into a Terminal window on Mac](https://support.apple.com/guide/terminal/drag-items-into-a-terminal-window-trml106/mac)). In particular, I would first type `cd ` (note the single trailing space):
 > 
 > ```
-> (base) C:\Users\YourName>cd 
+> (base) ➜  ~ cd 
 > ```
 > 
 > Then, I would drag a folder into the terminal window and press return. For instance, suppose I had created a folder called `computing-readiness` somewhere on my computer and dragged it in, then pressed return --- I would see something like this:
 > 
 > ```
-> (base) C:\Users\YourName> cd C:\Users\YourName\Documents\projects\ae-computing\python-refresher
-> (base) python-refresher>
+> (base) ➜  ~ cd /Users/httran/Documents/projects/ae-computing/python-refresher 
+> (base) ➜  python-refresher
 > ```
 > 
-> I could then use the `dir` command to print the working directory, which would show something like this:
+> I could then use the `pwd` command to print the working directory, which would show something like this:
 > 
 > ```bash
-> (base) python-refresher> cd
-> C:\Users\YourName\Documents\projects\ae-computing\python-refresher
+> (base) ➜  python-refresher pwd
+> /Users/httran/Documents/projects/ae-computing/python-refresher
 > ```
 > 
-> See documentation in the [cd](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd) and [dir](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir) page for other ways to specify the path to a directory.
+> See documentation in the [Specify files and folders in Terminal on Mac](https://support.apple.com/guide/terminal/specify-files-and-folders-apd3cf6fe02-3ec8-48f1-951f-866e52955fc8/mac) page for other ways to specify the path to a directory.
 
 You can create the `computing-readiness' folder and structure shown above by opening a terminal and running the following commands. **Note that lines starting with a "#" symbol are comments, not commands to enter.**
 
@@ -176,7 +193,7 @@ You can create the `computing-readiness' folder and structure shown above by ope
 cd
 
 # show the folders within your home directory (optional)
-dir
+ls
 
 # change your working directory to the Documents folder
 cd Documents
@@ -219,13 +236,13 @@ Create a conda environment for your course (replacing "my-course" with your cour
     ```bash
     Channels:
     - defaults
-    Platform: win-64
+    Platform: osx-arm64
     Collecting package metadata (repodata.json): done
     Solving environment: done
 
     ## Package Plan ##
 
-    environment location: C:\Users\httran\anaconda3\envs\my-course
+    environment location: /Users/httran/anaconda3/envs/my-course
 
 
 
@@ -265,7 +282,7 @@ You should follow these steps every day before you start to work on a course or 
 
     ```bash
     cd
-    cd C:\Users\YourName\Documents\projects\my-course\my-assignment
+    cd Documents/projects/my-course/my-assignment
     ```
 
 1. Activate your conda environment by running this command:
