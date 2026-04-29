@@ -355,22 +355,22 @@ git branch -d homework-3
 
 ## Quick Reference
 
-| Command | What it does |
-|---------|-------------|
-| `git init` | Start tracking a folder with Git |
-| `git clone <url>` | Download a repository |
-| `git status` | See which files changed |
-| `git add <file>` | Stage a file for commit |
-| `git add .` | Stage all changes |
-| `git commit -m "message"` | Save your changes with a description |
-| `git push` | Upload commits to GitHub |
-| `git pull` | Download latest changes from GitHub |
-| `git log --oneline` | See commit history |
-| `git branch` | List branches |
-| `git checkout -b <branch>` | Create and switch to a new branch |
-| `git checkout <branch>` | Switch to a branch |
-| `git merge <branch>` | Combine a branch into the current branch |
-| `git diff` | See exactly what changed |
+| Command                    | What it does                             |
+| -------------------------- | ---------------------------------------- |
+| `git init`                 | Start tracking a folder with Git         |
+| `git clone <url>`          | Download a repository                    |
+| `git status`               | See which files changed                  |
+| `git add <file>`           | Stage a file for commit                  |
+| `git add .`                | Stage all changes                        |
+| `git commit -m "message"`  | Save your changes with a description     |
+| `git push`                 | Upload commits to GitHub                 |
+| `git pull`                 | Download latest changes from GitHub      |
+| `git log --oneline`        | See commit history                       |
+| `git branch`               | List branches                            |
+| `git checkout -b <branch>` | Create and switch to a new branch        |
+| `git checkout <branch>`    | Switch to a branch                       |
+| `git merge <branch>`       | Combine a branch into the current branch |
+| `git diff`                 | See exactly what changed                 |
 
 ## Troubleshooting Tips
 
